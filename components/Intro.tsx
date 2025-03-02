@@ -7,7 +7,6 @@ import Link from "next/link";
 import { BsArrowRight, BsLinkedin } from "react-icons/bs";
 import { HiDownload } from "react-icons/hi";
 import { FaGithubSquare } from "react-icons/fa";
-import HeroVideo from "./HeroVideo";
 import { useEffect, useRef } from "react";
 
 export default function Intro() {
