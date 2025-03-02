@@ -113,51 +113,52 @@ export default function Intro() {
             delay: 0.1,
           }}
         >
-          <div className="flex gap-2">
+          <div className="flex gap-3">
             <div className="group relative">
-              <span className="absolute -z-10 block h-6 w-full animate-gradient-foreground-1 rounded-full bg-gradient-to-r from-gradient-1-start to-gradient-1-end blur-md duration-300 group-hover:blur-xl sm:h-10"></span>
-              <span className="absolute -z-10 block h-6 w-full animate-gradient-foreground-2 rounded-full bg-gradient-to-r from-gradient-2-start to-gradient-2-end blur-md duration-300 group-hover:blur-xl sm:h-10"></span>
+              <span className="absolute -z-10 block h-8 w-full animate-gradient-foreground-1 rounded-full bg-gradient-to-r from-gradient-1-start to-gradient-1-end blur-md duration-300 group-hover:blur-xl sm:h-12"></span>
+              <span className="absolute -z-10 block h-8 w-full animate-gradient-foreground-2 rounded-full bg-gradient-to-r from-gradient-2-start to-gradient-2-end blur-md duration-300 group-hover:blur-xl sm:h-12"></span>
               <Link
                 href="#contact"
-                className="group flex items-center gap-2 rounded-full bg-gray-900 px-2 py-1 text-xs text-white outline-none duration-300 sm:px-7 sm:py-3"
+                className="group flex items-center gap-3 rounded-full bg-gray-900 px-4 py-2 text-sm text-white outline-none duration-300 sm:px-9 sm:py-4 sm:text-base"
                 onClick={() => {
                   setActiveSection("Contact");
                   setTimeOfLastClick(Date.now());
                 }}
               >
-                Contact me here{" "}
-                <BsArrowRight className="opacity-70 transition group-hover:translate-x-1" />
+                Contact me here
+                <BsArrowRight className="text-lg opacity-70 transition group-hover:translate-x-1 sm:text-xl" />
               </Link>
             </div>
             <a
-              className="borderBlack group flex cursor-pointer items-center gap-2 rounded-full bg-white px-2 py-1 text-xs outline-none duration-300 hover:scale-110 focus:scale-110 active:scale-105 dark:bg-white/10 sm:px-7 sm:py-3"
-              href="/IsaacMarianDsouza_Resume-1.pdf"
+              className="borderBlack group flex cursor-pointer items-center gap-3 rounded-full bg-white px-4 py-2 text-sm outline-none duration-300 hover:scale-110 focus:scale-110 active:scale-105 dark:bg-white/10 sm:px-9 sm:py-4 sm:text-base"
+              href="/IsaacMarianDsouza_Resume.pdf"
               download
             >
-              Download Resume{" "}
-              <HiDownload className="opacity-60 transition group-hover:translate-x-1" />
+              Download Resume
+              <HiDownload className="text-lg opacity-60 transition group-hover:translate-x-1 sm:text-xl" />
             </a>
           </div>
-          <div className="flex gap-2">
+          <div className="flex gap-3">
             <a
-              className="borderBlack flex cursor-pointer items-center gap-2 rounded-full bg-white p-1 text-gray-700 duration-300 hover:scale-[1.15] hover:text-gray-950 focus:scale-[1.15] active:scale-105 dark:bg-white/10 dark:text-white/60 sm:p-3"
+              className="borderBlack flex cursor-pointer items-center gap-2 rounded-full bg-white p-2 text-gray-700 duration-300 hover:scale-[1.2] hover:text-gray-950 focus:scale-[1.2] active:scale-105 dark:bg-white/10 dark:text-white/60 sm:p-4"
               href="https://www.linkedin.com/in/isaac-marian-dsouza-42b5aa288/"
               target="_blank"
               title="Link to my LinkedIn"
             >
-              <BsLinkedin />
+              <BsLinkedin className="text-2xl sm:text-3xl" />
             </a>
             <a
               href="https://github.com/IsaacDsouza"
               target="_blank"
-              className="borderBlack flex cursor-pointer items-center gap-2 rounded-full bg-white p-1 text-gray-700 duration-300 hover:scale-[1.15] hover:text-gray-950 focus:scale-[1.15] active:scale-105 dark:bg-white/10 dark:text-white/60 sm:p-3"
+              className="borderBlack flex cursor-pointer items-center gap-2 rounded-full bg-white p-2 text-gray-700 duration-300 hover:scale-[1.2] hover:text-gray-950 focus:scale-[1.2] active:scale-105 dark:bg-white/10 dark:text-white/60 sm:p-4"
               title="Link to my GitHub"
             >
-              <FaGithubSquare />
+              <FaGithubSquare className="text-2xl sm:text-3xl" />
             </a>
           </div>
+
         </motion.div>
-        
+
       </div>
     </section>
   );

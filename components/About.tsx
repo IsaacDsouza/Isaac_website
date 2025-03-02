@@ -45,7 +45,7 @@ export default function About() {
             frontend developer,
             programmer and{" "}
             a Computer Science(AI) engineering student 
-              at Manipal Institue of Technology.
+              at Manipal Institute of Technology.
           </p>
           <p>
             My focus is on creating <strong>modern</strong>{" "}
