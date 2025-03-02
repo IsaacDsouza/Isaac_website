@@ -1,12 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  reactStrictMode: true,
   experimental: {
-    serverActions: true,
+    serverActions: true, // Ensure Server Actions are enabled
   },
-};
-
-module.exports = module.exports = {
   eslint: {
     ignoreDuringBuilds: true,
   },
 };
+
+module.exports = nextConfig;
