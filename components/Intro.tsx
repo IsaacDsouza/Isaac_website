@@ -62,19 +62,19 @@ export default function Intro() {
             animate={{ opacity: 1, y: 0 }}
           >
             <span
-              data-content="Habib"
+              data-content="Isaac"
               className="relative inline-block before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 before:inline-block before:w-full before:animate-gradient-background-1 before:text-center before:text-black before:content-[attr(data-content)] before:dark:text-white"
             >
               <span className="inline-block animate-gradient-foreground-1 bg-gradient-to-r from-gradient-1-start to-gradient-1-end bg-clip-text px-1 text-transparent">
-                Habib
+                Isaac
               </span>
             </span>{" "}
             <span
-              data-content="Mollah"
+              data-content="Marian Dsouza"
               className="relative inline-block before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 before:inline-block before:w-full before:animate-gradient-background-2 before:text-center before:text-black before:content-[attr(data-content)] before:dark:text-white"
             >
               <span className="inline-block animate-gradient-foreground-2 bg-gradient-to-r from-gradient-2-start to-gradient-2-end bg-clip-text px-1 text-transparent">
-                Mollah
+                Marian Dsouza
               </span>
             </span>
           </motion.h1>
@@ -132,7 +132,7 @@ export default function Intro() {
             </div>
             <a
               className="borderBlack group flex cursor-pointer items-center gap-2 rounded-full bg-white px-2 py-1 text-xs outline-none duration-300 hover:scale-110 focus:scale-110 active:scale-105 dark:bg-white/10 sm:px-7 sm:py-3"
-              href="/resume-of-habib-mollah-standard.pdf"
+              href="/IsaacMarianDsouza_Resume-1.pdf"
               download
             >
               Download Resume{" "}
@@ -142,14 +142,14 @@ export default function Intro() {
           <div className="flex gap-2">
             <a
               className="borderBlack flex cursor-pointer items-center gap-2 rounded-full bg-white p-1 text-gray-700 duration-300 hover:scale-[1.15] hover:text-gray-950 focus:scale-[1.15] active:scale-105 dark:bg-white/10 dark:text-white/60 sm:p-3"
-              href="https://www.linkedin.com/in/habib-ibn-tofazzal/"
+              href="https://www.linkedin.com/in/isaac-marian-dsouza-42b5aa288/"
               target="_blank"
               title="Link to my LinkedIn"
             >
               <BsLinkedin />
             </a>
             <a
-              href="https://github.com/habibmollah"
+              href="https://github.com/IsaacDsouza"
               target="_blank"
               className="borderBlack flex cursor-pointer items-center gap-2 rounded-full bg-white p-1 text-gray-700 duration-300 hover:scale-[1.15] hover:text-gray-950 focus:scale-[1.15] active:scale-105 dark:bg-white/10 dark:text-white/60 sm:p-3"
               title="Link to my GitHub"
@@ -158,8 +158,8 @@ export default function Intro() {
             </a>
           </div>
         </motion.div>
+        
       </div>
-      <HeroVideo />
     </section>
   );
 }

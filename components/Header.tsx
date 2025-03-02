@@ -14,12 +14,12 @@ export default function Header() {
   return (
     <header className="relative z-[999]">
       <motion.div
-        className="fixed left-1/2 top-24 h-[4.5rem] w-full rounded-none border border-white border-opacity-40 bg-white bg-opacity-50 shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem] dark:border-black/40 dark:bg-gray-950 dark:bg-opacity-50 sm:h-[3.25rem] sm:w-[40rem] sm:rounded-full md:top-20 xl:top-12"
+        className="fixed left-1/2 top-24 h-[4.5rem] w-full max-w-[48rem] rounded-none border border-white border-opacity-40 bg-white bg-opacity-50 shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem] dark:border-black/40 dark:bg-gray-950 dark:bg-opacity-50 sm:h-[3.25rem] sm:rounded-full md:top-20 xl:top-12"
         initial={{ y: -100, x: "-50%", opacity: 0 }}
         animate={{ y: 0, x: "-50%", opacity: 1 }}
       ></motion.div>
       <nav className="fixed left-1/2 top-24 flex h-12 -translate-x-1/2 py-2 sm:h-[initial] sm:py-0 md:top-[5.25rem] xl:top-[3.25rem]">
-        <ul className="flex w-[22rem] flex-wrap items-center justify-center gap-y-1 text-[0.9rem] font-medium sm:w-[initial] sm:flex-nowrap sm:gap-5">
+        <ul className="flex w-[30rem] flex-wrap items-center justify-center gap-y-1 text-[0.9rem] font-medium sm:w-[40rem] sm:flex-nowrap sm:gap-6">
           {links.map((link) => (
             <motion.li
               className="relative flex h-3/4 items-center justify-center"

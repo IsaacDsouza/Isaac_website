@@ -12,11 +12,11 @@ import Warning from "@/components/Warning";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Habib Mollah",
+  title: "Isaac Marian Dsouza",
   description:
-    "Habib Mollah is a professional front end web developer and fullstack engineer specialized in javascript, typescript, react and next.js",
+    "Isaac Marian Dsouza is a professional Full Stack web developer and Computer Science with specialization in Artificial Intellignece.",
   icons: {
-    icon: "./favicon.ico",
+    icon: "./public/i-high-resolution-logo(1).png",
   },
   keywords: [
     "web developer",

@@ -25,24 +25,28 @@ export default function About() {
             className="rounded-t-xl"
             width={1075.5}
             height={1018.5}
-            alt="performance scores of this portfolio"
-            src="/portfolio-performance-scores.webp"
+            alt="Isaac Marian Dsouza"
+            src="/Isaacportweb.jpg"
           />
           <figcaption className="italic text-gray-400">
-            Performance scores of this website
+            Isaac Marian Dsouza
           </figcaption>
         </figure>
         <div className="text-center sm:text-xl">
           <p>
-            I'm an experienced frontend developer,{" "}
+            I'm an experienced {" "}
             <span className="bg-[#efd81bbb] px-1 font-bold text-black dark:bg-[#efd81b]">
               JavaScript
             </span>{" "}
-            programmer and{" "}
-            <span className="bg-blue-500/60 px-1 font-bold text-white">
-              open source software
+            and
+            {" "}<span className="font-bold text-black dark:bg-#139cc8 inline-block !text-[#139cc8]">
+              React 
             </span>{" "}
-            enthusiast.
+            
+            frontend developer,
+            programmer and{" "}
+            a Computer Science(AI) engineering student 
+              at Manipal Institue of Technology.
           </p>
           <p>
             My focus is on creating <strong>modern</strong>{" "}
@@ -50,22 +54,20 @@ export default function About() {
               high-performance
             </span>{" "}
             websites and apps that <strong>excel</strong> in{" "}
-            <span className="bg-pink-200 px-1 font-bold dark:bg-pink-500">
+            <span className="font-bold">
               design, functionality, accessibility, and user experience.
             </span>
           </p>
           <p>
-            I'm also actively contributing to the translation of the official
+            I'm currently working as a Frontend Software Engineer at{" "}
             <a
-              href="https://bn-react-dev.vercel.app/"
-              target="_blank"
-              className="inline-block !text-[#139cc8] underline underline-offset-4"
+              className="font-bold text-blue-500 underline"
+              href="https://broadbits.com/"
             >
-              <span className="flex items-center font-medium">
-                <TbBrandReact /> React
-              </span>
-            </a>{" "}
-            documentation into Bengali.
+              Broadbits.
+            </a>
+            
+
             <span className="font-bold italic"></span>
           </p>
         </div>

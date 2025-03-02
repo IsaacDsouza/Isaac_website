@@ -5,6 +5,7 @@ import Intro from "@/components/Intro";
 import Projects from "@/components/Projects";
 import SectionDivider from "@/components/SectionDivider";
 import Skills from "@/components/Skills";
+import Education from "@/components/Education";
 
 export default function Index() {
   return (
@@ -12,9 +13,9 @@ export default function Index() {
       <Intro />
       <SectionDivider />
       <About />
-      <Projects />
       <Skills />
       <Experience />
+      <Education />
       <Contact />
     </main>
   );

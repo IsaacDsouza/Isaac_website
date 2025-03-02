@@ -2,7 +2,6 @@ import { createElement } from "react";
 import {
   TbBrandBootstrap,
   TbBrandCss3,
-  TbBrandFirebase,
   TbBrandFramerMotion,
   TbBrandGit,
   TbBrandHtml5,
@@ -12,11 +11,18 @@ import {
   TbBrandTailwind,
   TbBrandTypescript,
   TbMarkdown,
+  TbBrandDocker,
+  TbBrandDjango,
 } from "react-icons/tb";
-import { SiMui, SiNextdotjs } from "react-icons/si";
-import { FaSass } from "react-icons/fa";
+import { 
+  SiNextdotjs, 
+  SiMui, 
+  SiC, 
+  SiTensorflow, 
+  SiPython, 
+  SiMysql, 
+} from "react-icons/si";
 import { MdWorkOutline } from "react-icons/md";
-import { LuGraduationCap } from "react-icons/lu";
 import tiktokFind from "@/public/tiktok-find.webp";
 import affling from "@/public/affling.webp";
 import gamepedia from "@/public/gamepedia.webp";
@@ -41,10 +47,7 @@ export const links = [
     name: "About",
     hash: "#about",
   },
-  {
-    name: "Projects",
-    hash: "#projects",
-  },
+  
   {
     name: "Skills",
     hash: "#skills",
@@ -52,6 +55,10 @@ export const links = [
   {
     name: "Experience",
     hash: "#experience",
+  },
+  {
+    name: "Education",
+    hash: "#education",
   },
   {
     name: "Contact",
@@ -202,82 +209,90 @@ export const skillsData = [
   { name: "TypeScript", icon: createElement(TbBrandTypescript) },
   { name: "React", icon: createElement(TbBrandReact) },
   { name: "Next.js", icon: createElement(SiNextdotjs) },
+  { name: "Python", icon: createElement(SiPython) },
+  { name: "MySQL", icon: createElement(SiMysql) },
+  { name: "Django", icon: createElement(TbBrandDjango) },
+  { name: "Docker", icon: createElement(TbBrandDocker) },
   { name: "Framer Motion", icon: createElement(TbBrandFramerMotion) },
   { name: "Redux", icon: createElement(TbBrandRedux) },
-  { name: "Firebase", icon: createElement(TbBrandFirebase) },
   { name: "Tailwind", icon: createElement(TbBrandTailwind) },
   { name: "MUI", icon: createElement(SiMui) },
   { name: "Bootstrap", icon: createElement(TbBrandBootstrap) },
-  { name: "SASS", icon: createElement(FaSass) },
   { name: "CSS", icon: createElement(TbBrandCss3) },
   { name: "Markdown", icon: createElement(TbMarkdown) },
   { name: "HTML", icon: createElement(TbBrandHtml5) },
   { name: "Git", icon: createElement(TbBrandGit) },
+  { name: "C", icon: createElement(SiC) },
+  { name: "TensorFlow", icon: createElement(SiTensorflow) },
+  
+
 ] as const;
 
 export const experiencesData = [
   {
-    title: "Frontend Software Engineer (part-time)",
+    title: "Full Stack Software Engineer (part-time)",
     location: "Broadbits",
     description:
-      "Currently, I am working remotely part-time as a Frontend Software Engineer within this organization.",
+      "Currently, I am working remotely part-time as a Full Stack Software Engineer within this organization.",
     icon: createElement(MdWorkOutline),
-    date: "February, 2024 - present",
+    date: "September 2024 - present",
   },
   {
-    title: "Frontend Software Engineer",
-    location: "Faz Studio",
+    title: "ACM WebMaster",
+    location: "MITB ACM Student Chapter",
     description:
-      "I used to work full-time as a Frontend Software Engineer within this organization.",
+      "I worked full-time as a WebMaster within this organization.",
     icon: createElement(MdWorkOutline),
-    date: "October, 2023 - February, 2024",
+    date: "October 2024 - present",
   },
   {
-    title: "Frontend Developer",
-    location: "ImernTech",
+    title: "Frontend Software Engineer Intern",
+    location: "Broadbits",
     description:
-      "I worked part-time as a Frontend Developer in this company. Sometimes I served as the team lead over here",
+      "I used to work as a Frontend Software Engineer Intern within this organization.",
     icon: createElement(MdWorkOutline),
-    date: "July, 2023 - October, 2023",
+    date: "May 2024- September 2024",
   },
-  {
-    title: "Front-End Development Libraries Certification",
-    location: "freeCodeCamp.org",
-    description:
-      "Through this course I learned to use popular front-end libraries which boost development speed like: Bootstrap, SASS, jQuery and Redux and mastered React.js. To achieve the certification, I had to submit 5 projects built with React: 1) Random quote machine, 2) Drum machine, 3) Markdown previewer, 4) Calculator, 5) Pomodoro (25 + 5) clock. These projects honed my React skills and taught me how to use it as a sword for creating interactive UI.",
-    icon: createElement(LuGraduationCap),
-    date: "2021 - present",
-  },
-  {
-    title: "Advanced React and its Ecosystem",
-    location: "codewithmosh.com",
-    description:
-      "I dived into React's giant ecosystem with many ways to handle routing, caching, data fetching, testing, animations, state management and so on.",
-    icon: createElement(LuGraduationCap),
-    date: "2021 - present",
-  },
-  {
-    title: "TypeScript (Beginner to Advanced)",
-    location: "codewithmosh.com",
-    description:
-      "JavaScript has a lot of limitations. It is a dynamically typed language. Because of the lack of a type system it behaves unexpectedly often. TypeScript is a superset of JavaScript that was made to overcome the limitations of JavaScript. I learned almost all the nitty gritty stuff about TypeScript in this course.",
-    icon: createElement(LuGraduationCap),
-    date: "2021 - present",
-  },
-  {
-    title: "JavaScript Algorithms and Data Structures Certification",
-    location: "freeCodeCamp.org",
-    description:
-      "I entered the world of programming with JavaScript. Along this course I learned the basic to advanced topics of a programming language particularly in JavaScript and solved many many problems, scripted many advance algorithms.",
-    icon: createElement(LuGraduationCap),
-    date: "2019 - 2021",
-  },
-  {
-    title: "Responsive Web Design Certification",
-    location: "freeCodeCamp.org",
-    description:
-      "I gained a strong foundation of web development by learning the building blocks of the web HTML5 and CSS3 including semantic HTML elements, HTML Best Practices for SEO, CSS animations, media queries, box-model, flex, grid etc.",
-    icon: createElement(LuGraduationCap),
-    date: "2019",
-  },
+  
+
 ] as const;
+
+export const educationData = [
+  {
+    
+    title: "Manipal Institue of Technology",
+    location: "B.Tech in Computer Science(AI)",
+    description:
+      "Bachelor of Technology in Computer Science with specialization in Artificial Intelligence.",
+    icon: createElement(MdWorkOutline),
+    date: "2022-2026",
+  },
+  {
+    
+    title: "Mount Carmel Central School",
+    location: "High School Diploma - Physics, Chemistry, Mathematics, and Computer Science",
+    description:
+      "Grade Secured - 83.8%.",
+    icon: createElement(MdWorkOutline),
+    date: "2020-2022",
+  },
+  {
+    title: "Mount Carmel Central School",
+    location: "Matriculation",
+    description:
+      "Grade Secured - 92.8%.",
+    icon: createElement(MdWorkOutline),
+    date: "2016-2020",
+  },
+  {
+    title: "Indian Community School Kuwait",
+    location: "Broadbits",
+    description:
+      "Grade Secured - A.",
+    icon: createElement(MdWorkOutline),
+    date: "2007-2016",
+  },
+  
+
+] as const;
+
