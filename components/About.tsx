@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 import SectionHeading from "./SectionHeading";
 import useSectionInView from "@/lib/hooks";
 import Image from "next/image";
-import { TbBrandReact } from "react-icons/tb";
 
 export default function About() {
   const { ref } = useSectionInView("About");
