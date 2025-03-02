@@ -263,7 +263,7 @@ export const experiencesData = [
 export const educationData = [
   {
     
-    title: "Manipal Institue of Technology",
+    title: "Manipal Institute of Technology",
     location: "B.Tech in Computer Science(AI)",
     description:
       "Bachelor of Technology in Computer Science with specialization in Artificial Intelligence.",
