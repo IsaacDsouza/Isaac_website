@@ -5,35 +5,32 @@ import { Inter } from "next/font/google";
 import ActiveSectionContextProvider from "@/contexts/active-session-context";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-// import ThemeSwitch from "@/components/ThemeSwitch";
 import { Toaster } from "react-hot-toast";
-import Warning from "@/components/Warning";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Isaac Marian Dsouza",
+  title: "Isaac Marian Dsouza | Full Stack Engineer",
   description:
-    "Isaac Marian Dsouza is a professional Full Stack web developer and Computer Science with specialization in Artificial Intellignece.",
+    "Isaac Marian Dsouza is a Full Stack Engineer specializing in AI Systems, Security Engineering, and cloud-native applications.",
   icons: {
     icon: "./public/i-high-resolution-logo(1).png",
   },
   keywords: [
     "web developer",
-    "web development",
-    "frontend",
-    "front end",
-    "front-end",
     "full stack",
+    "security engineering",
+    "AI systems",
+    "FastAPI",
     "react",
-    "react.js",
-    "javascript",
-    "typescript",
-    "next.js",
+    "kubernetes",
+    "azure",
+    "docker",
     "programming",
+    "isaac marian dsouza",
   ],
-  authors: [{ name: "Habib Mollah", url: "https://mollah.vercel.app" }],
-  creator: "Habib Mollah",
+  authors: [{ name: "Isaac Marian Dsouza" }],
+  creator: "Isaac Marian Dsouza",
   robots: { index: true, follow: true },
 };
 
@@ -47,7 +44,6 @@ export default function RootLayout({
       <body
         className={`${inter.className} relative bg-gray-50 pt-28 text-gray-950 dark:bg-gray-900 dark:text-gray-50 dark:text-opacity-90 sm:pt-36`}
       >
-        <Warning />
         <div className="absolute right-[11rem] top-[-6rem] -z-10 h-[31.25rem] w-[31.25rem] rounded-full bg-[#fbe2e3] blur-[10rem] dark:bg-[#946263] sm:w-[68.75rem]"></div>
         <div className="absolute left-[-35rem] top-[-1rem] -z-10 h-[31.25rem] w-[50rem] rounded-full bg-[#dbd7fb] blur-[10rem] dark:bg-[#676394] sm:w-[68.75rem] md:left-[-33rem] lg:left-[-28rem] xl:left-[-15rem] 2xl:left-[-5rem]"></div>
 
@@ -70,7 +66,6 @@ export default function RootLayout({
                 },
               }}
             />
-            {/* <ThemeSwitch /> */}
           </ActiveSectionContextProvider>
         </ThemeContextProvider>
       </body>

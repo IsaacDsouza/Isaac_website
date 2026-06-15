@@ -16,7 +16,8 @@ export default function Intro() {
 
   // Hacker Effect
   useEffect(() => {
-    const letters = "abcdefghijklmnopqrstuvwxyz";
+    const letters = "abcdefghijklmnopqrstuvwxyz-";
+    const targetWord = "AI-powered";
     // Run the hacker effect every 2 seconds
     const intervalOne = setInterval(() => {
       let iterations = 0;
@@ -26,11 +27,11 @@ export default function Intro() {
           codeRef.current.innerText = codeRef.current.innerText
             .split("")
             .map((_letter, index) => {
-              if (index < iterations) return "code"[index];
-              return letters[Math.floor(Math.random() * 26)];
+              if (index < iterations) return targetWord[index];
+              return letters[Math.floor(Math.random() * letters.length)];
             })
             .join("");
-          if (iterations >= 4) clearInterval(intervalTwo);
+          if (iterations >= targetWord.length) clearInterval(intervalTwo);
           iterations++;
         }
       }, 100);
@@ -56,7 +57,6 @@ export default function Intro() {
           </motion.p>
           <motion.h1
             className="mx-auto select-none text-5xl font-extrabold leading-none !tracking-tighter sm:text-6xl lg:text-8xl"
-            aria-label="Habib Mollah"
             initial={{ opacity: 0, y: 100 }}
             animate={{ opacity: 1, y: 0 }}
           >
@@ -82,21 +82,21 @@ export default function Intro() {
             animate={{ opacity: 1, y: 0 }}
             className="text-center text-gray-600 dark:text-gray-300 sm:text-xl"
           >
-            A frontend developer crafting imagination through{" "}
+            A Full Stack Engineer experienced in building{" "}
             <span
               ref={codeRef}
               className="bg-black px-1 py-[2px] font-mono font-medium text-[#00FF41]"
             >
-              code
-            </span>
-            .
+              AI-powered
+            </span>{" "}
+            platforms, security automation, and cloud-native applications.
           </motion.p>
           <motion.p
             initial={{ opacity: 0, y: 100 }}
             animate={{ opacity: 1, y: 0 }}
             className="mt-16 text-center text-sm text-gray-400"
           >
-            Fun fact: I really really LOVE TypeScript and React.js
+            
           </motion.p>
         </div>
         <motion.div

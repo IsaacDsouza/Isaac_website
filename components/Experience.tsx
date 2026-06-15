@@ -1,11 +1,6 @@
 "use client";
 
 import React from "react";
-import {
-  VerticalTimeline,
-  VerticalTimelineElement,
-} from "react-vertical-timeline-component";
-import "react-vertical-timeline-component/style.min.css";
 import { experiencesData } from "@/lib/data";
 import useSectionInView from "@/lib/hooks";
 import { useThemeContext } from "@/contexts/theme-context";
@@ -18,52 +13,63 @@ export default function Experience() {
 
   return (
     <section id="experience" ref={ref} className="mb-28 scroll-mt-28 sm:mb-40">
-      <SectionHeading>My Experience</SectionHeading>
-      <VerticalTimeline lineColor="">
+      <SectionHeading>Professional Experience</SectionHeading>
+
+      {/* Timeline Container */}
+      <div className="relative mt-10 flex flex-col items-center space-y-20">
+        {/* Center Branch Line */}
+        <div className="absolute left-1/2 -translate-x-1/2 w-[4px] h-full bg-gray-400 dark:bg-gray-600"></div>
+
+        {/* Timeline Items */}
         {experiencesData.map((item, index) => (
-          <React.Fragment key={index}>
-            <VerticalTimelineElement
-              contentStyle={{
-                background:
-                  theme === "light" ? "#ffffff" : "#1e293b", // Matches Education
-                boxShadow: "0px 4px 12px rgba(0, 0, 0, 0.1)", // Soft shadow like Education
-                borderRadius: "12px", // Rounded corners for consistency
-                textAlign: "left",
-                padding: "1.5rem 2rem",
-                color: theme === "light" ? "#1e293b" : "#f8fafc", // Text color
-              }}
-              contentArrowStyle={{
-                borderRight:
-                  theme === "light"
-                    ? "0.4rem solid #9ca3af"
-                    : "0.4rem solid #94a3b8",
-              }}
-              icon={item.icon}
-              iconStyle={{
-                background:
-                  theme === "light" ? "#f8fafc" : "#334155",
-                fontSize: "1.8rem",
-                color: theme === "light" ? "#1e293b" : "#f8fafc",
-              }}
+          <motion.div
+            key={index}
+            whileInView={{ opacity: 1, scale: 1 }}
+            initial={{ opacity: 0, scale: 0.9 }}
+            transition={{ duration: 0.5, ease: "easeOut" }}
+            className={`relative flex items-center w-full max-w-4xl ${
+              index % 2 === 0 ? "flex-row" : "flex-row-reverse"
+            }`}
+          >
+            {/* Connector Spacer */}
+            <div className="relative w-1 h-full flex justify-center items-center"></div>
+
+            {/* Outlined Icon */}
+            <div
+              className={`w-16 h-16 flex items-center justify-center rounded-full text-3xl shadow-lg z-10 ${
+                theme === "light"
+                  ? "bg-gray-100 text-gray-800 border border-gray-400"
+                  : "bg-gray-700 text-white border border-gray-500"
+              } ${index % 2 === 0 ? "ml-6" : "mr-6"}`}
             >
-              {/* Animated Card */}
-              <motion.div
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, ease: "easeOut" }}
-              >
-                <h3 className="text-xl font-bold">{item.title}</h3> {/* Matches Education Font */}
-                <p className="!mt-0 text-sm text-gray-500 dark:text-gray-300">
-                  {item.location}
-                </p>
-                <p className="!mt-2 text-gray-700 dark:text-gray-300 leading-relaxed">
-                  {item.description}
-                </p>
-              </motion.div>
-            </VerticalTimelineElement>
-          </React.Fragment>
+              {item.icon}
+            </div>
+
+            {/* Experience Card */}
+            <div
+              className={`p-6 w-96 md:w-[450px] lg:w-[500px] rounded-lg shadow-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 ${
+                index % 2 === 0 ? "ml-6" : "mr-6"
+              }`}
+            >
+              <div className="flex justify-between items-start flex-wrap gap-2 mb-1">
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
+                  {item.title}
+                </h3>
+                <span className="text-xs font-semibold px-2 py-1 rounded-md bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-300 whitespace-nowrap">
+                  {item.date}
+                </span>
+              </div>
+              <p className="text-sm font-medium text-gray-500 dark:text-gray-400">
+                {item.location}
+              </p>
+              <p className="mt-2 text-md text-gray-700 dark:text-gray-300 leading-relaxed">
+                {item.description}
+              </p>
+            </div>
+          </motion.div>
         ))}
-      </VerticalTimeline>
+      </div>
     </section>
   );
 }
+
