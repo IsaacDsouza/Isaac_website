@@ -14,12 +14,12 @@ export default function Header() {
   return (
     <header className="relative z-[999]">
       <motion.div
-        className="fixed left-1/2 top-24 h-[4.5rem] w-full max-w-[48rem] rounded-none border border-white border-opacity-40 bg-white bg-opacity-50 shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem] dark:border-black/40 dark:bg-gray-950 dark:bg-opacity-50 sm:h-[3.25rem] sm:rounded-full md:top-20 xl:top-12"
+        className="fixed left-1/2 top-3 h-[4.9rem] w-[calc(100%-1rem)] max-w-[48rem] rounded-3xl border border-white/40 bg-white/70 shadow-lg shadow-black/[0.03] backdrop-blur-md dark:border-black/40 dark:bg-gray-950/70 sm:top-24 sm:h-[3.25rem] sm:w-full sm:rounded-full md:top-20 xl:top-12"
         initial={{ y: -100, x: "-50%", opacity: 0 }}
         animate={{ y: 0, x: "-50%", opacity: 1 }}
       ></motion.div>
-      <nav className="fixed left-1/2 top-24 flex h-12 -translate-x-1/2 py-2 sm:h-[initial] sm:py-0 md:top-[5.25rem] xl:top-[3.25rem]">
-        <ul className="flex w-[30rem] flex-wrap items-center justify-center gap-y-1 text-[0.9rem] font-medium sm:w-[40rem] sm:flex-nowrap sm:gap-6">
+      <nav className="fixed left-1/2 top-3 flex h-[4.9rem] -translate-x-1/2 items-center py-2 sm:top-24 sm:h-[initial] sm:py-0 md:top-[5.25rem] xl:top-[3.25rem]">
+        <ul className="flex w-[calc(100vw-1.5rem)] max-w-[30rem] flex-wrap items-center justify-center gap-1 text-[0.72rem] font-medium sm:w-[40rem] sm:max-w-none sm:flex-nowrap sm:gap-6 sm:text-[0.9rem]">
           {links.map((link) => (
             <motion.li
               className="relative flex h-3/4 items-center justify-center"
@@ -29,7 +29,7 @@ export default function Header() {
             >
               <Link
                 className={clsx(
-                  "flex w-full items-center justify-center p-3 text-gray-900 duration-300 hover:text-black dark:text-gray-300 dark:hover:text-gray-100",
+                  "flex w-full items-center justify-center rounded-full px-3 py-2 text-gray-900 duration-300 hover:text-black dark:text-gray-300 dark:hover:text-gray-100",
                   {
                     "!text-gray-50 dark:!text-gray-950":
                       activeSection === link.name,
@@ -56,12 +56,12 @@ export default function Header() {
               </Link>
             </motion.li>
           ))}
-          <motion.li
+            <motion.li
             className="relative flex h-3/4 items-center justify-center"
             initial={{ y: -100, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
           >
-            <div className="flex w-full items-center justify-center duration-300 hover:text-gray-950 dark:text-gray-400 dark:hover:text-gray-100">
+            <div className="flex w-full items-center justify-center duration-300 hover:text-gray-950 dark:text-gray-400 dark:hover:text-gray-100 sm:px-2">
               <ThemeSwitch />
             </div>
           </motion.li>

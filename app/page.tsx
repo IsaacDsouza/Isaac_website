@@ -8,7 +8,7 @@ import Education from "@/components/Education";
 
 export default function Index() {
   return (
-    <main className="mt-24 flex flex-col items-center px-4 sm:mt-0">
+    <main className="mt-24 flex w-full flex-col items-center px-4 sm:mt-0 sm:px-6">
       <Intro />
       <SectionDivider />
       <About />

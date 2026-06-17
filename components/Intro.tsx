@@ -44,19 +44,19 @@ export default function Intro() {
     <section
       ref={ref}
       id="home"
-      className="flex max-w-[80rem] scroll-mt-[100rem] flex-col-reverse items-start gap-2 text-center lg:mt-16 lg:max-w-[90rem] lg:flex-row"
+      className="flex w-full max-w-[80rem] scroll-mt-[100rem] flex-col-reverse items-center gap-2 text-center lg:mt-16 lg:max-w-[90rem] lg:flex-row lg:items-start"
     >
-      <div className="mx-auto">
+      <div className="mx-auto w-full">
         <div className="mb-4">
           <motion.p
             initial={{ opacity: 0, y: 100 }}
             animate={{ opacity: 1, y: 0 }}
-            className="ml-8 text-left text-lg font-extralight sm:ml-24"
+            className="text-left text-base font-extralight sm:ml-24 sm:text-lg"
           >
             Hey! I'm
           </motion.p>
           <motion.h1
-            className="mx-auto select-none text-5xl font-extrabold leading-none !tracking-tighter sm:text-6xl lg:text-8xl"
+            className="mx-auto select-none text-4xl font-extrabold leading-[1.05] !tracking-tighter sm:text-6xl lg:text-8xl"
             initial={{ opacity: 0, y: 100 }}
             animate={{ opacity: 1, y: 0 }}
           >
@@ -80,7 +80,7 @@ export default function Intro() {
           <motion.p
             initial={{ opacity: 0, y: 100 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-center text-gray-600 dark:text-gray-300 sm:text-xl"
+            className="mx-auto max-w-2xl text-center text-sm leading-7 text-gray-600 dark:text-gray-300 sm:text-lg lg:text-xl"
           >
             A Full Stack Engineer experienced in building{" "}
             <span
@@ -94,13 +94,13 @@ export default function Intro() {
           <motion.p
             initial={{ opacity: 0, y: 100 }}
             animate={{ opacity: 1, y: 0 }}
-            className="mt-16 text-center text-sm text-gray-400"
+            className="mt-12 text-center text-xs text-gray-400 sm:mt-16 sm:text-sm"
           >
             
           </motion.p>
         </div>
         <motion.div
-          className="mt-2 flex flex-col items-center justify-center gap-2 px-4 text-lg font-medium sm:flex-row"
+          className="mt-2 flex w-full flex-col items-stretch justify-center gap-3 px-0 text-lg font-medium sm:flex-row sm:items-center sm:gap-4 sm:px-4"
           initial={{
             opacity: 0,
             y: 100,
@@ -113,13 +113,13 @@ export default function Intro() {
             delay: 0.1,
           }}
         >
-          <div className="flex gap-3">
+          <div className="flex flex-col gap-3 sm:flex-row">
             <div className="group relative">
               <span className="absolute -z-10 block h-8 w-full animate-gradient-foreground-1 rounded-full bg-gradient-to-r from-gradient-1-start to-gradient-1-end blur-md duration-300 group-hover:blur-xl sm:h-12"></span>
               <span className="absolute -z-10 block h-8 w-full animate-gradient-foreground-2 rounded-full bg-gradient-to-r from-gradient-2-start to-gradient-2-end blur-md duration-300 group-hover:blur-xl sm:h-12"></span>
               <Link
                 href="#contact"
-                className="group flex items-center gap-3 rounded-full bg-gray-900 px-4 py-2 text-sm text-white outline-none duration-300 sm:px-9 sm:py-4 sm:text-base"
+                className="group flex items-center justify-center gap-3 rounded-full bg-gray-900 px-4 py-3 text-sm text-white outline-none duration-300 sm:px-9 sm:py-4 sm:text-base"
                 onClick={() => {
                   setActiveSection("Contact");
                   setTimeOfLastClick(Date.now());
@@ -130,7 +130,7 @@ export default function Intro() {
               </Link>
             </div>
             <a
-              className="borderBlack group flex cursor-pointer items-center gap-3 rounded-full bg-white px-4 py-2 text-sm outline-none duration-300 hover:scale-110 focus:scale-110 active:scale-105 dark:bg-white/10 sm:px-9 sm:py-4 sm:text-base"
+              className="borderBlack group flex cursor-pointer items-center justify-center gap-3 rounded-full bg-white px-4 py-3 text-sm outline-none duration-300 hover:scale-105 focus:scale-105 active:scale-105 dark:bg-white/10 sm:px-9 sm:py-4 sm:text-base"
               href="/IsaacMarianDsouza_Resume.pdf"
               download
             >
@@ -138,22 +138,22 @@ export default function Intro() {
               <HiDownload className="text-lg opacity-60 transition group-hover:translate-x-1 sm:text-xl" />
             </a>
           </div>
-          <div className="flex gap-3">
+          <div className="flex justify-center gap-3">
             <a
-              className="borderBlack flex cursor-pointer items-center gap-2 rounded-full bg-white p-2 text-gray-700 duration-300 hover:scale-[1.2] hover:text-gray-950 focus:scale-[1.2] active:scale-105 dark:bg-white/10 dark:text-white/60 sm:p-4"
+              className="borderBlack flex cursor-pointer items-center gap-2 rounded-full bg-white p-2 text-gray-700 duration-300 hover:scale-[1.08] hover:text-gray-950 focus:scale-[1.08] active:scale-105 dark:bg-white/10 dark:text-white/60 sm:p-4 sm:hover:scale-[1.2]"
               href="https://www.linkedin.com/in/isaac-marian-dsouza-42b5aa288/"
               target="_blank"
               title="Link to my LinkedIn"
             >
-              <BsLinkedin className="text-2xl sm:text-3xl" />
+              <BsLinkedin className="text-xl sm:text-3xl" />
             </a>
             <a
               href="https://github.com/IsaacDsouza"
               target="_blank"
-              className="borderBlack flex cursor-pointer items-center gap-2 rounded-full bg-white p-2 text-gray-700 duration-300 hover:scale-[1.2] hover:text-gray-950 focus:scale-[1.2] active:scale-105 dark:bg-white/10 dark:text-white/60 sm:p-4"
+              className="borderBlack flex cursor-pointer items-center gap-2 rounded-full bg-white p-2 text-gray-700 duration-300 hover:scale-[1.08] hover:text-gray-950 focus:scale-[1.08] active:scale-105 dark:bg-white/10 dark:text-white/60 sm:p-4 sm:hover:scale-[1.2]"
               title="Link to my GitHub"
             >
-              <FaGithubSquare className="text-2xl sm:text-3xl" />
+              <FaGithubSquare className="text-xl sm:text-3xl" />
             </a>
           </div>
 

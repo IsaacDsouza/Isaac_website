@@ -5,8 +5,8 @@ export default function Footer() {
         &copy; Isaac Marian Dsouza. All rights reserved.
       </small>
       <p className="text-xs">
-        <span className="font-semibold">About this website:</span> built with 💖
-        and React with Next.js (App Router & Server Actions), TypeScript,
+        <span className="font-semibold">About this website:</span> built with love
+        and React with Next.js (App Router and Server Actions), TypeScript,
         Tailwind CSS, Framer Motion.
       </p>
     </footer>
